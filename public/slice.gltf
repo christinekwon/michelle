@@ -1,0 +1,115 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cylinder",
+            "rotation" : [
+                0.7071068286895752,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                1,
+                0.4892694354057312,
+                1
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "indices" : 3
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 30,
+            "max" : [
+                0,
+                1,
+                0.0012557506561279297
+            ],
+            "min" : [
+                -0.3826834559440613,
+                -1,
+                -1
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 30,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 30,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 48,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 360,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 240,
+            "byteOffset" : 360,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 360,
+            "byteOffset" : 600,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96,
+            "byteOffset" : 960,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1056,
+            "uri" : "data:application/octet-stream;base64,AAAAAAAAgL8AAIC/AAAAAAAAgL8AAIC/AAAAAAAAgL8AAIC/AAAAAAAAgD8AAIC/AAAAAAAAgD8AAIC/AAAAAAAAgD8AAIC/Fu/DvgAAgL9eg2y/Fu/DvgAAgL9eg2y/Fu/DvgAAgL9eg2y/Fu/DvgAAgD9eg2y/Fu/DvgAAgD9eg2y/Fu/DvgAAgD9eg2y/7oOEvgAAgL/qRne/7oOEvgAAgL/qRne/7oOEvgAAgL/qRne/7oOEvgAAgD/qRne/7oOEvgAAgD/qRne/7oOEvgAAgD/qRne/qagFvgAAgL9Vz32/qagFvgAAgL9Vz32/qagFvgAAgL9Vz32/qagFvgAAgD9Vz32/qagFvgAAgD9Vz32/qagFvgAAgD9Vz32/AAAAAAAAgD8AmKQ6AAAAAAAAgD8AmKQ6AAAAAAAAgD8AmKQ6AAAAAAAAgL8AjKQ6AAAAAAAAgL8AjKQ6AAAAAAAAgL8AjKQ6AADKNAAAAD8AAMo0AAAAPwAAQD9cjwI/AADKNAAAAAAAAIA+XI8CPwAAgD5cjwI/MwCAPQAAAD8zAIA9AAAAP+l8KD+iPAc/MwCAPQAAAACk8yE+ojwHP6TzIT6iPAc/EKsqPQAAAD8Qqyo9AAAAPyEZMD9NpwQ/EKsqPQAAAAAQqyo9AAAAAIRkQD5NpwQ/dauqPAAAAD91q6o8AAAAPwD7Nz/sFQM/dauqPAAAAAB1q6o8AAAAAADsXz7sFQM/AACAPsATQD8AAIA+wBNAPwAAgD7AE0A/uJTNPj7jPj+4lM0+PuM+PwAAQD+/E0A/+vGFvQAAAACvc3+/AACAPwAAAAAAAACAAAAAAAAAgL8AAACA+vGFvQAAAACvc3+/AAAAAAAAgD8AAACAAACAPwAAAAAAAACAZ49svxG0/7L4tMM+uJOkvgAAAAAEanK/AAAAAAAAgL8AAACAuJOkvgAAAAAEanK/Z49svxG0/7L4tMM+AAAAAAAAgD8AAACAuJOkvgAAAAAEanK/1sVHvgAAAAC+FHu/AAAAAAAAgL8AAACAuJOkvgAAAAAEanK/1sVHvgAAAAC+FHu/AAAAAAAAgD8AAACA1sVHvgAAAAC+FHu/+vGFvQAAAACvc3+/AAAAAAAAgL8AAACA1sVHvgAAAAC+FHu/+vGFvQAAAACvc3+/AAAAAAAAgD8AAACAZ49svxG0/7L4tMM+AAAAAAAAgD8AAACAAACAPwAAAAAAAACAZ49svxG0/7L4tMM+AACAPwAAAAAAAACAAAAAAAAAgL8AAACAHAABAAUAHAAFABoAGwAYAAoAGwAKAAYABwAJAA8ABwAPAAwADQAQABUADQAVABIAEwAWAAMAEwADAAAAGQAEABcAFwARAAsAFwALABkADgAUAAIAAgAdAAgAAgAIAA4A"
+        }
+    ]
+}
