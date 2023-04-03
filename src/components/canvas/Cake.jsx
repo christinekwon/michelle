@@ -17,7 +17,7 @@ export default function Cake({ route, ...props }) {
     const mesh = useRef(null)
     const [hovered, hover] = useState(false)
     // const points = useMemo(() => new THREE.EllipseCurve(0, 0, 3, 1.15, 0, 2 * Math.PI, false, 0).getPoints(100), [])
-    const { nodes } = useGLTF('http://localhost:3000/slice.glb')
+    const { nodes } = useGLTF('https://michelle-g7gt.vercel.app/slice.glb')
     // const { nodes } = useGLTF(SLICE.src)
     // const gltf = useLoader(GLTFLoader, 'http://localhost:3000/slice.gltf');
     // console.log(gltf)
