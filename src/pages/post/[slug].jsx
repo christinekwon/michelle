@@ -3,6 +3,9 @@ import client from '@/../client'
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import { PortableText } from '@portabletext/react'
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
+
 
 function urlFor(source) {
     return imageUrlBuilder(client).image(source)
@@ -27,6 +30,11 @@ const ptComponents = {
 
 const Post = ({ post }) => {
     // const router = useRouter()
+
+    const router = useRouter()
+    if (!router.isFallback && !post) {
+        return <ErrorPage statusCode={404} />
+    }
 
     const { title = 'Missing title', name = 'Missing name', categories, mainImage, body = [] } = post
     return (
