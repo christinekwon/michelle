@@ -32,7 +32,7 @@ const Post = ({ post }) => {
     // const router = useRouter()
 
     const router = useRouter()
-    if (!router.isFallback && !post) {
+    if (router.isFallback || !post) {
         return <ErrorPage statusCode={404} />
     }
 
@@ -82,7 +82,7 @@ export async function getStaticPaths() {
 
     return {
         paths: paths.map((slug) => ({ params: { slug } })),
-        fallback: false,
+        fallback: true,
     }
 }
 
