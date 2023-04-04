@@ -72,7 +72,7 @@ export default function Cake({ route, ...props }) {
             /> */}
             {/* <mesh castShadow receiveShadow geometry={nodes.Cylinder.geometry} position={[0, 0, 0]} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}> */}
             <mesh castShadow receiveShadow geometry={nodes.Cylinder.geometry} position={[0, 0, 0]} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}>
-                <meshPhongMaterial shininess={30} emissive={'black'} color={hovered ? 'hotpink' : 'lightpink'} />
+                <meshPhongMaterial shininess={30} emissive={'black'} color={hovered ? 'hotpink' : 'aliceblue'} />
             </mesh>
             {/* <mesh castShadow receiveShadow geometry={nodes.Cylinder.geometry} rotation-y={Math.PI / 8 * 2} position={[0, 0, 0]} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}>
                 <meshPhongMaterial shininess={30} emissive={'black'} color={hovered ? 'hotpink' : 'lightpink'} />
