@@ -5,13 +5,14 @@ import { scrollEnable, scrollDisable } from '@/lib/helpers'
 import Link from 'next/link'
 import Menu from '@/components/Menu'
 import MobileMenuTrigger from './mobile-menu-trigger'
+import Img from '@/components/Image'
 
 export default function Header({ siteData, data }) {
   const pathname = usePathname()
   const headerRef = useRef()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const { keyText, menu } = data
+  const { keyText, menu, mobileImage } = data
 
   useEffect(() => {
     document.documentElement.style.setProperty('--s-header', `${headerRef?.current?.offsetHeight || 0}px`)
@@ -35,13 +36,17 @@ export default function Header({ siteData, data }) {
         className={cx('header no-text-space', {
           'is-open': isMobileMenuOpen,
         })}>
-        <div className='header__title mobile-up-only'>
+        <div className='header__title'>
           {keyText &&
             keyText.split(' ').map((word, i) => (
-              <div class='header__title__word f-h'>
+              <div key={i} className={cx('header__title__word f-h', { 'mobile-up-only': i == 1 })}>
                 {Array.from(word)?.map((char, j) =>
                   char != ' ' ? (
-                    <div key={j} class='header__title__block t-h-2'>
+                    <div
+                      key={j}
+                      className={cx(`header__title__block t-h-2`, {
+                        'mobile-up-only': i == 0 && j != 0,
+                      })}>
                       {char}
                     </div>
                   ) : (
@@ -50,6 +55,11 @@ export default function Header({ siteData, data }) {
                 )}
               </div>
             ))}
+          {mobileImage && (
+            <div className='header__title__block f-h f-a-c f-j-c child-contain mobile-down-only'>
+              <Img image={mobileImage} className={'child-contain'} />
+            </div>
+          )}
         </div>
         {/* <Link className='g-header__logo' href='/'>
           <span className='t-b-1'>{siteData?.title ?? 'Title'}</span>
@@ -65,15 +75,15 @@ export default function Header({ siteData, data }) {
         <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} />
       </header>
 
-      {/* <div
+      <div
         className={cx('g-mobile-menu p-fill bg-white', {
           'is-open': isMobileMenuOpen,
         })}>
-        <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} />
+        {/* <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} /> */}
         {data?.menu && (
-          <Menu items={data?.menu?.items} className='g-mobile-menu__links' ulClassName='f-v f-j-s f-a-c t-h-3' />
+          <Menu items={data?.menu?.items} className='g-mobile-menu__links' ulClassName='f-v f-j-s f-a-c t-h-1' />
         )}
-      </div> */}
+      </div>
     </>
   )
 }

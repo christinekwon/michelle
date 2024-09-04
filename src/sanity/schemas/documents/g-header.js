@@ -1,3 +1,4 @@
+import customImage from '@/sanity/lib/custom-image'
 import { defineType } from 'sanity'
 
 export default defineType({
@@ -15,6 +16,7 @@ export default defineType({
       name: 'keyText',
       type: 'string',
     },
+    customImage({ name: 'mobileImage', title: 'Mobile Header Image' }),
   ],
   preview: {
     prepare() {

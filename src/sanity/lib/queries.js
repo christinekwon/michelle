@@ -147,7 +147,10 @@ export const site = groq`
 			menu{
 				${menu}
 			},
-			keyText
+			keyText,
+			mobileImage{
+				${imageMeta}
+			}
 		},
 		"footer": *[_type == "gFooter"][0]{
 			menu->{
