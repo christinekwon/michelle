@@ -1,0 +1,79 @@
+import React, { useEffect, useRef, useState } from 'react'
+import cx from 'classnames'
+import { usePathname } from 'next/navigation'
+import { scrollEnable, scrollDisable } from '@/lib/helpers'
+import Link from 'next/link'
+import Menu from '@/components/Menu'
+import MobileMenuTrigger from './mobile-menu-trigger'
+
+export default function Header({ siteData, data }) {
+  const pathname = usePathname()
+  const headerRef = useRef()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const { keyText, menu } = data
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--s-header', `${headerRef?.current?.offsetHeight || 0}px`)
+    const links = document.querySelector('.js-header-links')
+    links && document.documentElement.style.setProperty('--header-menu-width', `${links.clientWidth}px`)
+  }, [])
+
+  const onToggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+    isMobileMenuOpen ? scrollEnable() : scrollDisable()
+  }
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+  }, [pathname])
+
+  return (
+    <>
+      <header
+        ref={headerRef}
+        className={cx('header no-text-space', {
+          'is-open': isMobileMenuOpen,
+        })}>
+        <div className='header__title mobile-up-only'>
+          {keyText &&
+            keyText.split(' ').map((word, i) => (
+              <div class='header__title__word f-h'>
+                {Array.from(word)?.map((char, j) =>
+                  char != ' ' ? (
+                    <div key={j} class='header__title__block t-h-2'>
+                      {char}
+                    </div>
+                  ) : (
+                    <></>
+                  ),
+                )}
+              </div>
+            ))}
+        </div>
+        {/* <Link className='g-header__logo' href='/'>
+          <span className='t-b-1'>{siteData?.title ?? 'Title'}</span>
+        </Link> */}
+
+        {menu?.items && (
+          <Menu
+            items={menu.items}
+            className='header__links user-select-disable mobile-up-only js-header-links'
+            ulClassName='f-v f-a-e t-h-3 user-select-disable'
+          />
+        )}
+        <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} />
+      </header>
+
+      {/* <div
+        className={cx('g-mobile-menu p-fill bg-white', {
+          'is-open': isMobileMenuOpen,
+        })}>
+        <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} />
+        {data?.menu && (
+          <Menu items={data?.menu?.items} className='g-mobile-menu__links' ulClassName='f-v f-j-s f-a-c t-h-3' />
+        )}
+      </div> */}
+    </>
+  )
+}

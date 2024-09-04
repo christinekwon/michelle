@@ -1,0 +1,57 @@
+.header {
+  --key-size: 48px;
+  position: relative;
+  width: 100%;
+  padding: var(--gap-l) var(--s-contain);
+  z-index: 100;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__title {
+    display: flex;
+    gap: 72px;
+    flex-wrap: wrap;
+
+    &__word {
+      display: flex;
+      gap: var(--gap-m);
+    }
+
+    &__block {
+      color: var(--c-black);
+      background-color: var(--c-white);
+      width: var(--key-size);
+      height: var(--key-size);
+      flex: none;
+      padding: var(--gap-xs) var(--gap-s);
+    }
+  }
+
+  &__links {
+    ul {
+      gap: var(--gap-m);
+
+      li {
+        color: var(--c-black);
+        background-color: var(--c-white);
+        min-height: var(--key-size);
+        padding: var(--gap-xs) var(--gap-s);
+        text-transform: uppercase;
+        text-wrap: nowrap;
+
+        &.is-active {
+          background-color: var(--c-black);
+          color: var(--c-white);
+          filter: drop-shadow(0 0 10px var(--c-white));
+        }
+      }
+    }
+  }
+}
