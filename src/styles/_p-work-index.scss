@@ -1,0 +1,53 @@
+.work-index {
+  padding-top: calc(var(--s-header-y) + var(--s-section));
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+  gap: var(--gap-l);
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: var(--header-menu-width);
+
+    &__item {
+      align-items: stretch;
+      gap: var(--gap-s);
+      width: 100%;
+      position: relative;
+
+      &__image {
+        // width: 260px;
+        width: 50%;
+        aspect-ratio: 1;
+        flex: none;
+        border-radius: 100%;
+        overflow: hidden;
+      }
+
+      &__info {
+        gap: var(--gap-s);
+        padding: var(--gap-s) 0;
+        aspect-ratio: 1;
+      }
+
+      &__title {
+      }
+    }
+  }
+
+  @include mobileDown {
+    &__gallery {
+      grid-template-columns: 1fr;
+      &__item {
+        justify-content: center;
+      }
+    }
+  }
+}

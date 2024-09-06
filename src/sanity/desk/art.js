@@ -1,10 +1,10 @@
 import { HeartFilledIcon } from '@sanity/icons'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
-export const projectsMenu = (S, context) => {
+export const artMenu = (S, context) => {
   return orderableDocumentListDeskItem({
-    title: 'Projects',
-    type: 'pProject',
+    title: 'Art',
+    type: 'pArt',
     icon: HeartFilledIcon,
     S,
     context,

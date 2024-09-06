@@ -1,0 +1,55 @@
+.project {
+  padding-top: calc(var(--s-header-y) + var(--s-section));
+  padding-bottom: var(--s-section);
+  gap: var(--gap-l);
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__info {
+    gap: var(--gap-l);
+    width: 40%;
+
+    &__details {
+      font-style: italic;
+    }
+  }
+
+  &__gallery {
+    flex: 1;
+    align-items: stretch;
+    gap: var(--gap-m);
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      margin-top: var(--s-section);
+    }
+
+    &__row {
+      gap: var(--gap-m);
+      &__image {
+        flex: 1;
+      }
+    }
+  }
+
+  @include mobileDown {
+    flex-direction: column;
+
+    &__info {
+      width: 100%;
+      align-items: center;
+    }
+
+    &__gallery {
+      &__row {
+        flex-direction: column;
+      }
+    }
+  }
+}

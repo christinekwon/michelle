@@ -291,6 +291,55 @@ export const pageContactQuery = groq`
 	}
 `
 
+export const projectQuery = `
+	title,
+	"slug": slug.current,
+	date,
+	category,
+	skills,
+	contribution,
+	timeline,
+	content[]{
+		${portableTextContent}
+	},
+	thumbnail{
+		${imageMeta}
+	},
+	mainImage{
+		${imageMeta}
+	},
+	gallery[]{
+		heading,
+		images[]{
+			${imageMeta}
+		}
+	}
+`
+
+export const pageDesignSingleQuery = groq`
+	*[_type == "pDesign" && slug.current == $slug][0]{
+		${projectQuery}
+	}
+`
+
+export const pageArtSingleQuery = groq`
+	*[_type == "pArt" && slug.current == $slug][0]{
+		${projectQuery}
+	}
+`
+
+export const pageDesignIndex = groq`
+	*[_type == "pDesign"]|order(orderRank){
+		${projectQuery}
+	}
+`
+
+export const pageArtIndex = groq`
+	*[_type == "pArt"]|order(orderRank){
+		${projectQuery}
+	}
+`
+
 // new pages below...
 // export const pageAboutQuery = groq`;
 // 	*[_type == "pSpace"][0]{

@@ -10,12 +10,14 @@ import Img from '@/components/Image'
 export default function Header({ siteData, data }) {
   const pathname = usePathname()
   const headerRef = useRef()
+  const headerTitleRef = useRef()
+  const headerMenuRef = useRef()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const { keyText, menu, mobileImage } = data
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--s-header', `${headerRef?.current?.offsetHeight || 0}px`)
+    document.documentElement.style.setProperty('--s-header-y', `${headerTitleRef?.current?.offsetHeight || 0}px`)
     const links = document.querySelector('.js-header-links')
     links && document.documentElement.style.setProperty('--header-menu-width', `${links.clientWidth}px`)
   }, [])
@@ -36,7 +38,7 @@ export default function Header({ siteData, data }) {
         className={cx('header no-text-space', {
           'is-open': isMobileMenuOpen,
         })}>
-        <div className='header__title'>
+        <div ref={headerTitleRef} className='header__title'>
           {keyText &&
             keyText.split(' ').map((word, i) => (
               <div key={i} className={cx('header__title__word f-h', { 'mobile-up-only': i == 1 })}>

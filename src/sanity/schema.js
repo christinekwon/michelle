@@ -35,7 +35,8 @@ import gFooter from './schemas/documents/g-footer'
 import pGeneral from './schemas/documents/p-general'
 import p404 from './schemas/documents/p-404'
 import pHome from './schemas/documents/p-home'
-import pProject from './schemas/documents/p-project'
+import pArt from './schemas/documents/p-art'
+import pDesign from './schemas/documents/p-design'
 
 import pBlogIndex from './schemas/documents/p-blog-index'
 import pBlog from './schemas/documents/p-blog'
@@ -76,7 +77,8 @@ const schemas = [
   pGeneral,
   p404,
   pHome,
-  pProject,
+  pArt,
+  pDesign,
 
   pBlogIndex,
   pBlog,

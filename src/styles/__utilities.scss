@@ -48,7 +48,11 @@
 .c,
 .c-small {
   padding-left: var(--s-contain-dynamic);
-  padding-right: var(--s-contain-dynamic);
+  padding-right: calc(2 * var(--s-contain-dynamic) + var(--header-menu-width));
+
+  @include mobileDown {
+    padding-right: var(--s-contain-dynamic);
+  }
 }
 
 .c-small {

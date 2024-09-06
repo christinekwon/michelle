@@ -4,7 +4,8 @@ import { pageBlog } from './desk/p-blog'
 import { menusMenu } from './desk/menus'
 import { colorsMenu } from './desk/colors'
 import { settingsMenu } from './desk/settings'
-import { projectsMenu } from './desk/projects'
+import { artMenu } from './desk/art'
+import { designMenu } from './desk/design'
 
 const deskStructure = (S, context) =>
   S.list()
@@ -12,7 +13,8 @@ const deskStructure = (S, context) =>
     .items([
       globalMenu(S),
       pagesMenu(S),
-      projectsMenu(S, context),
+      artMenu(S, context),
+      designMenu(S, context),
       otherPagesMenu(S),
       S.divider(),
       pageBlog(S),

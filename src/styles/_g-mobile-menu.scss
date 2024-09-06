@@ -6,6 +6,7 @@
   height: var(--size);
   z-index: 110;
   transition: opacity 0.6s;
+  pointer-events: auto;
 
   &:before {
     content: '';
@@ -72,6 +73,7 @@
   transition: transform 0.3s var(--e-inOut-circ);
   z-index: 120;
   text-transform: lowercase;
+  color: var(--c-black);
 
   &.is-open {
     transform: translate3d(0px, 0px, 0px);

@@ -5,11 +5,12 @@ import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-li
 import customImage from '@/sanity/lib/custom-image'
 
 export default defineType({
-  title: 'Project',
-  name: 'pProject',
+  title: 'Design',
+  name: 'pDesign',
   type: 'document',
   icon: HeartFilledIcon,
   orderings: [orderRankOrdering],
+  fieldsets: [{ name: 'media', title: 'Media' }],
   fields: [
     orderRankField({ type: 'project' }),
     {
@@ -32,16 +33,60 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     },
-    customImage(),
     {
-      name: 'excerpt',
-      title: 'Excerpt',
+      name: 'date',
+      title: 'Date',
+      type: 'string',
+    },
+    {
+      name: 'category',
+      title: 'Category',
       type: 'text',
+    },
+    {
+      name: 'skills',
+      title: 'Skills',
+      type: 'string',
+    },
+    {
+      name: 'contribution',
+      title: 'Contribution',
+      type: 'string',
+    },
+    {
+      name: 'timeline',
+      title: 'Timeline',
+      type: 'string',
     },
     {
       title: 'Content',
       name: 'content',
       type: 'portableText',
+    },
+    customImage({ name: 'thumbnail', title: 'Thumbnail', fieldset: 'media' }),
+    customImage({ name: 'mainImage', title: 'Main Image', fieldset: 'media' }),
+    {
+      title: 'Gallery',
+      name: 'gallery',
+      type: 'array',
+      fieldset: 'media',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              type: 'string',
+              name: 'heading',
+              title: 'Section Heading (Optional)',
+            },
+            {
+              name: 'images',
+              type: 'array',
+              of: [customImage()],
+            },
+          ],
+        },
+      ],
     },
   ],
   preview: {

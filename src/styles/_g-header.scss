@@ -13,6 +13,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  pointer-events: none;
 
   &__title {
     display: flex;
@@ -52,6 +53,8 @@
   }
 
   &__links {
+    pointer-events: auto;
+
     ul {
       gap: var(--gap-m);
 
@@ -71,6 +74,12 @@
           padding: var(--gap-xs) var(--gap-s);
           min-height: var(--key-size);
           display: block;
+
+          @media (hover) {
+            &:hover {
+              font-style: italic;
+            }
+          }
         }
       }
     }
