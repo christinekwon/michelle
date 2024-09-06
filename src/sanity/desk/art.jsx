@@ -9,7 +9,7 @@ const artIndexPage = (S) => {
     .icon(DocumentIcon)
 }
 
-export const artMenu = (S, context) => {
+export const artMenu = (S) => {
   return S.listItem()
     .icon(HeartFilledIcon)
     .title('Art')
