@@ -15,12 +15,12 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
 export default function StudioPage() {
   return (
     <div className='sanity-studio-root'>
-      {/* <NextStudio config={config}>
-				<StudioProvider config={config}>
-					<GlobalStyle />
-					<StudioLayout />
-				</StudioProvider>
-			</NextStudio> */}
+      <NextStudio config={config}>
+        <StudioProvider config={config}>
+          <GlobalStyle />
+          <StudioLayout />
+        </StudioProvider>
+      </NextStudio>
       <style global jsx>{`
         .preview-banner {
           display: none !important;
