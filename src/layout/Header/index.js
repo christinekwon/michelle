@@ -25,7 +25,7 @@ export default function Header({ siteData, data }) {
 
   const onToggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-    isMobileMenuOpen ? scrollEnable() : scrollDisable()
+    // isMobileMenuOpen ? scrollEnable() : scrollDisable()
   }
 
   useEffect(() => {
@@ -76,6 +76,8 @@ export default function Header({ siteData, data }) {
             items={menu.items}
             className='header__links user-select-disable mobile-up-only js-header-links'
             ulClassName='f-v f-a-e t-h-3 user-select-disable'
+            isMobileMenuOpen={isMobileMenuOpen}
+            onToggleMenu={onToggleMenu}
           />
         )}
         <MobileMenuTrigger isMobileMenuOpen={isMobileMenuOpen} onHandleClick={onToggleMenu} />
