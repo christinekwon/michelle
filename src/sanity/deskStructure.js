@@ -35,19 +35,6 @@ import { designMenu } from './desk/design'
 const deskStructure = (S, context) =>
   S.list()
     .title('Website')
-    .items([
-      globalMenu(S),
-      pagesMenu(S),
-      artMenu(S),
-      designMenu(S),
-      // otherPagesMenu(S),
-      // S.divider(),
-      // pageBlog(S),
-      // S.divider(),
-      // menusMenu(S),
-      // colorsMenu(S),
-      S.divider(),
-      settingsMenu(S),
-    ])
+    .items([globalMenu(S), pagesMenu(S), artMenu(S), designMenu(S), S.divider(), settingsMenu(S)])
 
 export default deskStructure
