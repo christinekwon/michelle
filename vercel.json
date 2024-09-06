@@ -1,5 +1,3 @@
 {
-	"rewrites": [
-		{ "source": "/sanity/(.*)", "destination": "/sanity/index.html" }
-	]
+  "rewrites": [{ "source": "/src/sanity/(.*)", "destination": "/sanity/index.html" }]
 }
