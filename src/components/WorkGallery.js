@@ -12,9 +12,9 @@ export default function WorkGallery({ data = {}, path = '' }) {
           </div>
           <div className='work-index__gallery__item__info f-v mobile-up-only'>
             {project?.title && <div className='work-index__gallery__item__title t-h-1'>{project.title}</div>}
-            {project?.category && (
+            {project?.skills && (
               <ul className='t-h-4'>
-                {project.category.split('\n').map((item, j) => (
+                {project.skills.split('\n').map((item, j) => (
                   <li key={j}>{item}</li>
                 ))}
               </ul>

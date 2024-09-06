@@ -9,11 +9,21 @@ export default function ProjectPage({ data = {} }) {
       <div className='project__info f-v'>
         <h1 className='project__title t-h-1'>{title}</h1>
         <div className='project__info__details t-b-1 t-italic mobile-up-only'>
-          {skills && <p>SKILLS: {skills}</p>}
+          {skills && (
+            <p>
+              SKILLS:{' '}
+              {skills.split('\n').map((item, j) => (
+                <span key={j}>
+                  {item}
+                  {j < skills.split('\n').length - 1 ? ', ' : ''}
+                </span>
+              ))}
+            </p>
+          )}
           {contribution && <p>CONTRIBUTION: {contribution}</p>}
           {timeline && <p>TIMELINE: {timeline}</p>}
           {date && <p>{date}</p>}
-          {category && <p className=''>{category}</p>}
+          {/* {category && <p className=''>{category}</p>} */}
         </div>
         {content && (
           <div className='project__content wysiwyg-page mobile-up-only'>
@@ -36,7 +46,7 @@ export default function ProjectPage({ data = {} }) {
           <>
             {row?.heading && <div className='project__gallery__heading t-h-2 t-uppercase'>{row.heading}</div>}
             <div className='project__gallery__row f-h'>
-              {row?.images.map((image, j) => (
+              {row?.images?.map((image, j) => (
                 <Image image={image} className={'project__gallery__row__image'} />
               ))}
             </div>

@@ -33,11 +33,11 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'date',
-      title: 'Date',
-      type: 'string',
-    },
+    // {
+    //   name: 'date',
+    //   title: 'Date',
+    //   type: 'string',
+    // },
     // {
     //   name: 'category',
     //   title: 'Category',
@@ -46,7 +46,7 @@ export default defineType({
     {
       name: 'skills',
       title: 'Skills',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'contribution',

@@ -33,20 +33,20 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'date',
-      title: 'Date',
-      type: 'string',
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'text',
-    },
+    // {
+    //   name: 'date',
+    //   title: 'Date',
+    //   type: 'string',
+    // },
+    // {
+    //   name: 'category',
+    //   title: 'Category',
+    //   type: 'text',
+    // },
     {
       name: 'skills',
       title: 'Skills',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'contribution',
