@@ -24,11 +24,6 @@ export default defineType({
       // ^ uncomment once page is published
     },
     {
-      title: 'English Title',
-      name: 'titleEnglish',
-      type: 'text',
-    },
-    {
       title: 'Korean Title',
       name: 'titleKorean',
       type: 'text',
