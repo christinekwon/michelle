@@ -5,7 +5,7 @@ import { menusMenu } from './desk/menus'
 import { colorsMenu } from './desk/colors'
 import { settingsMenu } from './desk/settings'
 // import { artMenu } from './desk/art'
-import { designMenu } from './desk/design'
+// import { designMenu } from './desk/design'
 
 const deskStructure = (S, context) =>
   S.list()
@@ -14,7 +14,7 @@ const deskStructure = (S, context) =>
       globalMenu(S),
       pagesMenu(S),
       // artMenu(S, context),
-      designMenu(S, context),
+      // designMenu(S),
       // otherPagesMenu(S),
       // S.divider(),
       // pageBlog(S),

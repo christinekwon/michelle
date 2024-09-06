@@ -11,7 +11,7 @@ const designIndexPage = (S) => {
     .icon(DocumentIcon)
 }
 
-export const designMenu = (S, context) => {
+export const designMenu = (S) => {
   return S.listItem()
     .title('Design')
     .id('design')
