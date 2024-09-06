@@ -28,11 +28,12 @@ export default defineType({
       name: 'title',
       type: 'string',
     },
-    // {
-    //   title: 'SEO + Share Settings',
-    //   name: 'sharing',
-    //   type: 'sharing',
-    // },
+    {
+      title: 'SEO + Share Settings',
+      name: 'sharing',
+      type: 'sharing',
+      hidden: true,
+    },
   ],
   preview: {
     select: {
