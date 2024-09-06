@@ -23,7 +23,6 @@ export default function ProjectPage({ data = {} }) {
           {contribution && <p>CONTRIBUTION: {contribution}</p>}
           {timeline && <p>TIMELINE: {timeline}</p>}
           {date && <p>{date}</p>}
-          {/* {category && <p className=''>{category}</p>} */}
         </div>
         {content && (
           <div className='project__content wysiwyg-page mobile-up-only'>
