@@ -37,6 +37,9 @@ import p404 from './schemas/documents/p-404'
 import pHome from './schemas/documents/p-home'
 import pArt from './schemas/documents/p-art'
 import pDesign from './schemas/documents/p-design'
+import pArtIndex from './schemas/documents/p-art-index'
+import pDesignIndex from './schemas/documents/p-design-index'
+import pAbout from './schemas/documents/p-about'
 
 import pBlogIndex from './schemas/documents/p-blog-index'
 import pBlog from './schemas/documents/p-blog'
@@ -79,6 +82,9 @@ const schemas = [
   pHome,
   pArt,
   pDesign,
+  pArtIndex,
+  pDesignIndex,
+  pAbout,
 
   pBlogIndex,
   pBlog,

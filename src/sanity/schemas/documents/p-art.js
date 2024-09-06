@@ -38,11 +38,11 @@ export default defineType({
       title: 'Date',
       type: 'string',
     },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'text',
-    },
+    // {
+    //   name: 'category',
+    //   title: 'Category',
+    //   type: 'text',
+    // },
     {
       name: 'skills',
       title: 'Skills',

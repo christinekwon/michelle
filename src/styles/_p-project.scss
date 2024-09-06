@@ -40,6 +40,7 @@
 
   @include mobileDown {
     flex-direction: column;
+    align-items: stretch;
 
     &__info {
       width: 100%;
@@ -49,6 +50,10 @@
     &__gallery {
       &__row {
         flex-direction: column;
+
+        &__image {
+          width: 100%;
+        }
       }
     }
   }

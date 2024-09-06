@@ -6,10 +6,6 @@ import { Suspense } from 'react'
 export default function PageArtIndex({ data }) {
   const { title, paginationMethod } = data || {}
 
-  useEffect(() => {
-    console.log(data)
-  }, [])
-
   return (
     <div className='work-index c f-v'>
       <section className='work-index__heading'>

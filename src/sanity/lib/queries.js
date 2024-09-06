@@ -291,6 +291,19 @@ export const pageContactQuery = groq`
 	}
 `
 
+export const pageAboutQuery = groq`
+	*[_type == "pAbout"][0]{
+		title,
+		"slug": slug.current,
+		content[]{
+			${portableTextContent}
+		},
+		image{
+			${imageMeta}
+		}
+	}
+`
+
 export const projectQuery = `
 	title,
 	"slug": slug.current,
@@ -329,14 +342,20 @@ export const pageArtSingleQuery = groq`
 `
 
 export const pageDesignIndex = groq`
-	*[_type == "pDesign"]|order(orderRank){
-		${projectQuery}
+	*[_type == "pDesignIndex"][0]{
+		title,
+		"projects": *[_type == "pDesign"]|order(orderRank){
+			${projectQuery}
+		}
 	}
 `
 
 export const pageArtIndex = groq`
-	*[_type == "pArt"]|order(orderRank){
-		${projectQuery}
+	*[_type == "pArtIndex"][0]{
+		title,
+		"projects": *[_type == "pArt"]|order(orderRank){
+			${projectQuery}
+		}
 	}
 `
 

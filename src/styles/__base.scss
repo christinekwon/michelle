@@ -42,8 +42,8 @@
   --t-h-1: 700 clamp(24px, 6vw, 36px) / 1 'IBM Plex Sans', Helvetica, sans-serif;
   --t-h-2: 700 24px/1.1 'IBM Plex Sans', Helvetica, sans-serif;
   --t-h-3: 700 20px/1.1 'IBM Plex Sans', Helvetica, sans-serif;
-  --t-h-4: 700 16px/1.1 'IBM Plex Sans', Helvetica, sans-serif;
-  --t-b-1: 400 clamp(14px, 5vw, 24px) / 1.25 'IBM Plex Sans', Helvetica, sans-serif;
+  --t-h-4: 400 clamp(14px, 5vw, 24px) / 1.1 'IBM Plex Sans', Helvetica, sans-serif;
+  --t-b-1: 400 clamp(14px, 5vw, 16px) / 1.25 'IBM Plex Sans', Helvetica, sans-serif;
   --t-b-2: 400 14px/1.25 'IBM Plex Sans', Helvetica, sans-serif;
   --t-b-3: 400 12px/1.25 'IBM Plex Sans', Helvetica, sans-serif;
   --t-l-1: 14px/1 'IBM Plex Sans', Helvetica, sans-serif;
@@ -136,23 +136,25 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+h1,
 .t-h-1 {
   font: var(--t-h-1);
 }
 
+h2,
 .t-h-2 {
   font: var(--t-h-2);
 }
 
-h1,
-h2,
 h3,
-h4,
-h5,
-h6,
 .t-h-3 {
   font: var(--t-h-3);
   text-wrap: balance;
+}
+
+h4,
+.t-h-4 {
+  font: var(--t-h-4);
 }
 
 .t-b-1 {

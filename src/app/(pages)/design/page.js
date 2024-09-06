@@ -25,7 +25,7 @@ export default async function Page() {
 
   return (
     <LiveQuery enabled={isPreviewMode} query={pageDesignIndex} initialData={page} as={PreviewPageDesignIndex}>
-      <PageDesignIndex data={page} />
+      <PageDesignIndex title={page?.title} data={page?.projects} />
     </LiveQuery>
   )
 }

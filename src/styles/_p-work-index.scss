@@ -1,10 +1,10 @@
 .work-index {
   padding-top: calc(var(--s-header-y) + var(--s-section));
+  padding-bottom: var(--s-section);
   display: flex;
   align-items: stretch;
   flex-direction: column;
-
-  gap: var(--gap-l);
+  gap: var(--s-section);
 
   &__heading {
     text-align: center;

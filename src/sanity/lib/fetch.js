@@ -76,6 +76,10 @@ export function getPagesPaths({ pageType }) {
         return groq`*[_type == "pGeneral" ].slug.current`
       case 'pBlog':
         return groq`*[_type == "pBlog" ].slug.current`
+      case 'pDesign':
+        return groq`*[_type == "pDesign" ].slug.current`
+      case 'pArt':
+        return groq`*[_type == "pArt" ].slug.current`
       default:
         console.warn('Invalid Page Type:', pageType)
         return groq`*[_type == "pGeneral" ].slug.current`
@@ -136,14 +140,25 @@ export function getContactPage({ queryParams, isPreviewMode }) {
   })
 }
 
-export function getDesignIndexPage({ isPreviewMode, isArticleDataSSG }) {
+export function getAboutPage({ queryParams, isPreviewMode }) {
+  const query = getPageDataStructure({ query: queries.pageAboutQuery })
+
+  return sanityFetch({
+    query,
+    params: queryParams,
+    tags: ['pAbout'],
+    isPreviewMode,
+  })
+}
+
+export function getDesignIndexPage({ isPreviewMode }) {
   const query = getPageDataStructure({
     query: queries.pageDesignIndex,
   })
 
   return sanityFetch({
     query,
-    tags: ['pDesign'],
+    tags: ['pDesignIndex'],
     isPreviewMode,
   })
 }
@@ -159,14 +174,14 @@ export function getDesignProjectPage({ queryParams, isPreviewMode }) {
   })
 }
 
-export function getArtIndexPage({ isPreviewMode, isArticleDataSSG }) {
+export function getArtIndexPage({ isPreviewMode }) {
   const query = getPageDataStructure({
     query: queries.pageArtIndex,
   })
 
   return sanityFetch({
     query,
-    tags: ['pArt'],
+    tags: ['pArtIndex'],
     isPreviewMode,
   })
 }

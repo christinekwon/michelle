@@ -1,4 +1,5 @@
 import Image from '@/components/Image'
+import CustomPortableText from './CustomPortableText'
 
 export default function ProjectPage({ data = {} }) {
   const { title, content, date, category, skills, contribution, timeline, mainImage, gallery } = data || {}

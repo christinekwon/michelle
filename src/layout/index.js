@@ -24,7 +24,6 @@ export default function Layout({ children, siteData }) {
 
   return (
     <>
-      <HeadTrackingCode siteData={siteData} />
       <AdaSkip />
       <Header data={header} />
       <Main>{children}</Main>
