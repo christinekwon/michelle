@@ -1,7 +1,7 @@
 import { defineType } from 'sanity'
 import { HeartFilledIcon } from '@sanity/icons'
 import { SlugField } from '@/sanity/component/SlugField'
-import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
+// import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
 import customImage from '@/sanity/lib/custom-image'
 
 export default defineType({
@@ -9,10 +9,10 @@ export default defineType({
   name: 'pArt',
   type: 'document',
   icon: HeartFilledIcon,
-  orderings: [orderRankOrdering],
+  // orderings: [orderRankOrdering],
   fieldsets: [{ name: 'media', title: 'Media' }],
   fields: [
-    orderRankField({ type: 'project' }),
+    // orderRankField({ type: 'project' }),
     {
       title: 'Title',
       name: 'title',
