@@ -36,7 +36,10 @@
         gap: var(--gap-s);
         padding: var(--gap-s) 0;
         aspect-ratio: 1;
-        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
         hyphens: auto;
       }
 
