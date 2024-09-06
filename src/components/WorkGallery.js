@@ -8,7 +8,7 @@ export default function WorkGallery({ data = {}, path = '' }) {
       {data.map((project, i) => (
         <div key={i} className='work-index__gallery__item f-h'>
           <div className='work-index__gallery__item__image bg-subtle child-cover'>
-            {project?.thumbnail && <Image image={project.thumbnail} />}
+            {project?.thumbnail && <Image className='child-cover' image={project.thumbnail} />}
           </div>
           <div className='work-index__gallery__item__info f-v mobile-up-only'>
             {project?.title && <div className='work-index__gallery__item__title t-h-1'>{project.title}</div>}
