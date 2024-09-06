@@ -29,8 +29,8 @@ import { pagesMenu } from './desk/pages'
 // import { menusMenu } from './desk/menus';
 // import { colorsMenu } from './desk/colors';
 import { settingsMenu } from './desk/settings'
-// import { artMenu } from './desk/art'
-// import { designMenu } from './desk/design'
+import { artMenu } from './desk/art'
+import { designMenu } from './desk/design'
 
 const deskStructure = (S, context) =>
   S.list()
@@ -38,8 +38,8 @@ const deskStructure = (S, context) =>
     .items([
       globalMenu(S),
       pagesMenu(S),
-      // artMenu(S),
-      // designMenu(S),
+      artMenu(S),
+      designMenu(S),
       // otherPagesMenu(S),
       // S.divider(),
       // pageBlog(S),
