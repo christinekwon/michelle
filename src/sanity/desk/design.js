@@ -1,5 +1,6 @@
 import { HeartFilledIcon, DocumentIcon } from '@sanity/icons'
-import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+// import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+import { apiVersion } from '@/sanity/env'
 
 const designIndexPage = (S) => {
   return S.listItem()
@@ -20,22 +21,17 @@ export const designMenu = (S, context) => {
         .title('Design')
         .items([
           designIndexPage(S),
-          orderableDocumentListDeskItem({
-            title: 'Design Projects',
-            type: 'pDesign',
-            icon: HeartFilledIcon,
-            S,
-            context,
-          }),
+          // orderableDocumentListDeskItem({
+          //   title: 'Design Projects',
+          //   type: 'pDesign',
+          //   icon: HeartFilledIcon,
+          //   S,
+          //   context,
+          // }),
 
-          // 				S.listItem()
-          // .title('Projects')
-          // .child(
-          // 	S.documentList()
-          // 		.title('Projects')
-          // 		.apiVersion(apiVersion)
-          // 		.filter('_type == "pDesign"')
-          // ),
+          S.listItem()
+            .title('Projects')
+            .child(S.documentList().title('Projects').apiVersion(apiVersion).filter('_type == "pDesign"')),
         ]),
     )
 }
