@@ -1,3 +1,13 @@
+@keyframes moveKey {
+  0%,
+  100% {
+    transform: translateY(var(--num));
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--num)));
+  }
+}
+
 .header {
   --key-size: 48px;
   position: relative;
@@ -35,6 +45,8 @@
       transition:
         color 0.3s,
         background-color 0.3s;
+
+      animation: moveKey 10s ease-in-out infinite;
 
       picture {
         transition: filter 0.3s;

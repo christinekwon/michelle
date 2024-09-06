@@ -49,7 +49,10 @@ export default function Header({ siteData, data }) {
                       key={j}
                       className={cx(`header__title__block t-h-2`, {
                         'mobile-up-only': i == 0 && j != 0,
-                      })}>
+                      })}
+                      style={{
+                        '--num': `${Math.floor(Math.random() * 30 - 20) * (Math.round(Math.random()) == 0 ? 1 : -1)}px`,
+                      }}>
                       {char}
                     </div>
                   ) : (

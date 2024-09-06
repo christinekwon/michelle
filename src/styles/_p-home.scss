@@ -1,3 +1,23 @@
+@keyframes moveImage {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-50vw, -50vh, 0);
+  }
+}
+
+@keyframes moveTextImage {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(50vw, -50vh, 0);
+  }
+}
+
 .home {
   background-color: var(--c-black);
   color: var(--c-white);
@@ -17,6 +37,7 @@
 
   &__title-image {
     width: min(40%, 600px);
+    animation: moveTextImage 60s ease-in-out infinite;
   }
 
   &__main-image {
@@ -24,6 +45,8 @@
     width: 100%;
     max-width: 800px;
     margin-bottom: -15%;
+    animation: moveImage 60s ease-in-out infinite;
+    mix-blend-mode: difference;
   }
 
   &__korean {
