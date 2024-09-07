@@ -48,7 +48,7 @@
     }
   }
 
-  @include mobileDown {
+  @include tabletDown {
     &__gallery {
       grid-template-columns: 1fr;
       &__item {

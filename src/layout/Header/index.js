@@ -32,6 +32,10 @@ export default function Header({ siteData, data }) {
     setIsMobileMenuOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    isMobileMenuOpen ? scrollDisable() : scrollEnable()
+  }, [isMobileMenuOpen])
+
   return (
     <>
       <header
